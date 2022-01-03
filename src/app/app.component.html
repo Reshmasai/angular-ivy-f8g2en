@@ -1,0 +1,77 @@
+<div class="navi">
+  <a href="#" class="home">Home</a>
+<button class="open" (click)="openit()"> Login </button>
+
+<div class="form-popup" id="myForm">
+  <form  class="form-container">
+
+    <label for="email"><b>Email</b></label>
+    <input id="mail" type="text" placeholder="Enter Email" name="email" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input id="pswd" type="password" placeholder="Enter Password" name="psw" required>
+     <p style="color:red">{{display}}</p>
+     <p>New User? please Register</p>
+    <button type="submit" (click)="valid()" class="log">Login</button>
+    <button type="button" (click)="closeit()" class="cancel" >Close</button>
+  </form>
+</div>
+
+<button  (click)="open()" class="right">Register</button>
+
+<div class="form2-popup"  id="Form">
+  <h2>New User</h2>
+  <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+
+    <div class="form-group">
+      <label for="">Name: </label>
+      <input type="text" class="form-control" [ngModel]="user.name" name="name">
+    </div><br>
+
+    <div class="form-group">
+      <label for="">number</label>
+      <input type="number" class="form-control" [ngModel]="user.number" name="number">
+    </div><br>
+
+    <div class="form-group">
+      <label for="">email : </label>
+      <input type="text" class="form-control" [ngModel]="user.email" name="email">
+    </div><br>
+    <div class="form-group">
+      <label for="">pswrd: </label>
+      <input type="text" class="form-control" [ngModel]="user.password" name="password">
+    </div><br>
+
+    <div class="form-group">
+      <button (click)="close()" type="submit" class="save" >save</button>
+    </div>
+    <div class="form-group">
+      <button (click)="close()" type="submit" class="close" >close</button>
+    </div>
+  </form>
+</div>
+  
+
+</div>
+
+<div class="header">
+  
+
+
+<h1 >To Do List</h1>
+<h3>write your tasks and press enter to add it</h3>
+  <h3>check the tasks to mark them as complete</h3>
+    <h3>click cross mark to delete the tasks</h3>
+<input style="width:60%;
+padding:12px 20px;
+margin-top: 0%;
+margin-left: 20%" type="text" id="task" name=task placeholder="enter the task and click enter to add"  [(ngModel)]="task" (keyup.enter)="onEnter()">
+<br><br>
+<router-outlet></router-outlet>
+<br><br>
+<button class="change" style="margin-left: 20%" routerLink="/">all</button><button class="change" routerLink="completed">completed</button><button class="change" routerLink="active">active</button><button class="change" routerLink="user">User details</button>
+</div>
+
+
+
+

@@ -1,0 +1,33 @@
+
+
+<div class="move">
+  <h3>Employee Information</h3>
+<div class="form-group">
+  <div class="Table">
+    <div class="Heading">
+
+      <div class="cell">
+        <p>Name</p>
+      </div>
+
+      <div class="cell">
+        <p>Number</p>
+      </div>
+
+      <div class="cell">
+        <p>Email</p>
+      </div>
+
+      <div class="cell">
+        <p>Password</p>
+      </div>
+    </div>
+<div class="Row" *ngFor="let i of data">
+  <div class="cell">{{i.name}}</div>
+  <div class="cell">{{i.number}}</div>
+  <div class="cell">{{i.email}}</div>
+  <div class="cell">{{i.password}}</div>
+</div>
+</div>
+</div>
+</div>
