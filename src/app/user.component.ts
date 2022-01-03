@@ -7,6 +7,7 @@ import {SimpleService} from './simple.service';
 })
 export class userComponent implements OnInit {
   data:any[]=[];
+  p:number=1;
  constructor(public simpleService:SimpleService){}
 
  ngOnInit(){

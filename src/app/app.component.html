@@ -59,13 +59,12 @@
 
 
 <h1 >To Do List</h1>
-<h3>write your tasks and press enter to add it</h3>
-  <h3>check the tasks to mark them as complete</h3>
-    <h3>click cross mark to delete the tasks</h3>
+<h3>write your tasks and press enter to add it | check the tasks to mark them as complete | click cross mark to delete the tasks </h3>
+  
 <input style="width:60%;
 padding:12px 20px;
 margin-top: 0%;
-margin-left: 20%" type="text" id="task" name=task placeholder="enter the task and click enter to add"  [(ngModel)]="task" (keyup.enter)="onEnter()">
+margin-left: 20%" type="text" id="task" name=task placeholder="what needs to be done?"  [(ngModel)]="task" (keyup.enter)="onEnter()">
 <br><br>
 <router-outlet></router-outlet>
 <br><br>

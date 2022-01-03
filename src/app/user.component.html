@@ -22,7 +22,7 @@
         <p>Password</p>
       </div>
     </div>
-<div class="Row" *ngFor="let i of data">
+<div class="Row" *ngFor="let i of data | paginate:{itemsPerPage:4,currentPage:p}">
   <div class="cell">{{i.name}}</div>
   <div class="cell">{{i.number}}</div>
   <div class="cell">{{i.email}}</div>
@@ -31,3 +31,4 @@
 </div>
 </div>
 </div>
+<pagination-controls (pageChange)="p=$event" class="float-right"></pagination-controls>
