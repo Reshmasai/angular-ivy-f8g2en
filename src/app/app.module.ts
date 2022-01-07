@@ -8,10 +8,9 @@ import { allComponent } from './all.component';
 import { completedComponent } from './completed.component';
 import {RouterModule} from '@angular/router';
 import { activeComponent } from './active.component';
-import {NgxPaginationModule} from 'ngx-pagination';
 import { userComponent } from './user.component';
 @NgModule({
-  imports:      [ BrowserModule, FormsModule,NgxPaginationModule,
+  imports:      [ BrowserModule, FormsModule,
     RouterModule.forRoot([
       {path:'',component:allComponent},
       {path:'completed',component:completedComponent},
